@@ -38,9 +38,9 @@
 Bước 1. **Git Clone về máy**
    ```bash
    git clone https://github.com/yourusername/discord-tool.git
-Bước 2. **Tải những thư viện mà tool cần**
+Bước 2. ** Tải những thư viện mà tool cần **
    ```bash
    pip discord.py colorma
-Bước 3. **Chạy file python**
-```bash
+Bước 3. ** Chạy file python **
+   ```bash
    python discord-tool.py or python3 discord-tool.py
