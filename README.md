@@ -1,5 +1,7 @@
 # Discord Tool by The Duc 
 
+## LƯU Ý
+
 **Một công cụ mạnh mẽ để quản lý Discord server – chỉ dành cho mục đích hợp pháp & có quyền sở hữu server!**
 
 **CẢNH BÁO: Sử dụng sai mục đích có thể vi phạm ToS của Discord và dẫn đến khóa tài khoản vĩnh viễn.**
@@ -44,3 +46,9 @@ Bước 2. ** Tải những thư viện mà tool cần **
 Bước 3. ** Chạy file python **
    ```bash
    python discord-tool.py or python3 discord-tool.py
+
+## NHỮNG ĐIỀU CẦN CHÚ Ý KHI DÙNG TOOL
+1. KHÔNG ĐƯỢC PUBLIC TOKEN BOT CHO BẤT KỲ AI KỂ AI NGƯỜI QUEN ĐỄ TRÁNH BỊ RAID SERVER
+2. BOT PHẢI CÓ QUYỀN Administrator HOẶC NHỮNG QUYỀN CẦN ĐỂ DÙNG
+## GIẤY PHÉP DÙNG TOOL
+** MIT LINCENSE - BẠN CÓ THỂ DÙNG TOOL TỰ DO NHƯNG BẠN PHẢI CHỊU HẬU QUẢ GÂY RA, KHÔNG PHẢI CHỦ TOOL
