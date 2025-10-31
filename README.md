@@ -1,7 +1,7 @@
 # Discord Tool by The Duc 
 
-> **Một công cụ mạnh mẽ để quản lý Discord server – chỉ dành cho mục đích hợp pháp & có quyền sở hữu server!**  
-> **CẢNH BÁO: Sử dụng sai mục đích có thể vi phạm ToS của Discord và dẫn đến khóa tài khoản vĩnh viễn.**
+> **Một công cụ mạnh mẽ để quản lý Discord server – chỉ dành cho mục đích hợp pháp & có quyền sở hữu server!** \n
+> **CẢNH BÁO: Sử dụng sai mục đích có thể vi phạm ToS của Discord và dẫn đến khóa tài khoản vĩnh viễn.**\n
 > **Mọi thắc mắc xin liên hệ discord: @Tarinx.deve**
 
 ---
@@ -39,5 +39,6 @@ Bước 1. **Git Clone về máy**
 Bước 2. **Tải những thư viện mà tool cần**
    ```bash
    pip discord.py colorma
-Bước 3. **Chạy file python** 
+Bước 3. **Chạy file python**
+```bash
    python discord-tool.py or python3 discord-tool.py
