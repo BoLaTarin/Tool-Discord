@@ -47,8 +47,4 @@ Bước 3. ** Chạy file python **
    ```bash
    python discord-tool.py or python3 discord-tool.py
 
-## NHỮNG ĐIỀU CẦN CHÚ Ý KHI DÙNG TOOL
-1. KHÔNG ĐƯỢC PUBLIC TOKEN BOT CHO BẤT KỲ AI KỂ AI NGƯỜI QUEN ĐỄ TRÁNH BỊ RAID SERVER
-2. BOT PHẢI CÓ QUYỀN Administrator HOẶC NHỮNG QUYỀN CẦN ĐỂ DÙNG
-## GIẤY PHÉP DÙNG TOOL
-** MIT LINCENSE - BẠN CÓ THỂ DÙNG TOOL TỰ DO NHƯNG BẠN PHẢI CHỊU HẬU QUẢ GÂY RA, KHÔNG PHẢI CHỦ TOOL
+
