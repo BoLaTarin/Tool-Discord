@@ -9,6 +9,8 @@
 
 **Discord Tool** là một script Python được viết bằng `discord.py` giúp thực hiện các thao tác **quản trị mạnh** trên một Discord server:
 
+  Mọi thắc mắc xin liên hệ discord: @Tarinx.deve
+
 - Xóa toàn bộ kênh & tạo lại hàng loạt (Nuke)
 - Ban toàn bộ thành viên (trừ chủ & bot)
 - Xóa toàn bộ role
