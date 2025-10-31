@@ -1,8 +1,10 @@
 # Discord Tool by The Duc 
 
-> **Công cụ quản trị Discord mạnh mẽ – chỉ dành cho server bạn sở hữu!**  
-> **CẢNH BÁO: Sử dụng sai mục đích sẽ vi phạm ToS Discord → bị khóa tài khoản vĩnh viễn.**
-> **Mọi thắc mắc xin liên hệ Discord: @Tarinx.deve**
+**Công cụ quản trị Discord mạnh mẽ – chỉ dành cho server bạn sở hữu!**  
+
+**CẢNH BÁO: Sử dụng sai mục đích sẽ vi phạm ToS Discord → bị khóa tài khoản vĩnh viễn.**
+
+**Mọi thắc mắc xin liên hệ Discord: @Tarinx.deve**
 
 ---
 
@@ -21,9 +23,9 @@
 
 ## NHỮNG ĐIỀU CẦN CHÚ Ý KHI DÙNG TOOL
 1. KHÔNG ĐƯỢC PUBLIC TOKEN BOT CHO BẤT KỲ AI KỂ AI NGƯỜI QUEN ĐỄ TRÁNH BỊ RAID SERVER
-2. BOT PHẢI CÓ QUYỀN Administrator HOẶC NHỮNG QUYỀN CẦN ĐỂ DÙNG
+2. BOT PHẢI CÓ QUYỀN ADMINISTRATOR HOẶC NHỮNG QUYỀN CẦN ĐỂ DÙNG
 ## GIẤY PHÉP DÙNG TOOL
-** MIT LINCENSE - BẠN CÓ THỂ DÙNG TOOL TỰ DO NHƯNG BẠN PHẢI CHỊU HẬU QUẢ GÂY RA, KHÔNG PHẢI CHỦ TOOL **
+**MIT LINCENSE - BẠN CÓ THỂ DÙNG TOOL TỰ DO NHƯNG BẠN PHẢI CHỊU HẬU QUẢ GÂY RA, KHÔNG PHẢI CHỦ TOOL**
 
 ## YÊU CẦU
 
