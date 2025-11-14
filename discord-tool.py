@@ -81,7 +81,7 @@ async def show_main_menu(guild):
         print(f"{Fore.MAGENTA}5. Thực hiện nhiều chức năng")
         print(f"{Fore.RED}6. Thoát")
         print(f"{Fore.CYAN}═" * 70)
-        print(f"{Fore.CYAN}Bấm Ctrl C để thoát tool ngay lập tức khi cần)
+        print(f"{Fore.CYAN}Bấm Ctrl C để thoát tool ngay lập tức khi cần")
 
         choice = await async_input(f"\n{Fore.YELLOW}Chọn (1-6): {Fore.WHITE}")
         choice = choice.strip()
@@ -349,3 +349,4 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
 
         print(f"\n{Fore.RED}Đã dừng bởi người dùng.")
+
